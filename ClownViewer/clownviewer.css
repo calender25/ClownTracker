@@ -1,0 +1,15 @@
+.register-form-field{
+    position: absolute;
+    left:150px;
+}
+.registerForm-hide{
+    visibility:hidden;
+}
+
+.registerForm-show{
+    visibility:visible;
+}
+
+body{
+ background-color: #24cacf;
+}

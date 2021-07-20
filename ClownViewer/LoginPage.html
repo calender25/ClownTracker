@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="./clownviewer.css">
+</head>
+
+<body onload="MainView.getInstance();">
+  <script language="javascript" type="text/javascript" src="./clownviewer.js"></script>
+  <main id="main-holder">
+    <h1 id="welcome-header">Welcome to the Clown’s Gateway</h1>
+    <div id = "login-section">   
+    <h2 id="login-header">Login</h2>
+    
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+    </div>
+    
+    <form id="login-form" class = "registerForm-show">
+      <input type="text" name="username" id="username-field" class="form-field" placeholder="Username">
+      <input type="password" name="password" id="password-field" class="form-field" placeholder="Password">
+      <input type="submit" value="Login" id="login-form-submit">
+    </form>
+    </div>
+
+    <div id = "register-section">
+    <div style="display: flex;">
+      <h2 id="register-header">Are you a clown in the city without registration, Please register here  </h2>
+      <button id ="register-button" style="width: 150px;height: 25px;align-self: center;">Register</button>
+    </div>
+    
+    <form id="register-form" class = "registerForm-hide">
+      <label>Name</label>
+      <input type="text" name="name" id="name-field" class="register-form-field" placeholder="Name" required><br><br>
+      <label>Date of Birth</label>
+      <input type="text" name="dob" id="dob-field" class="register-form-field" placeholder="DOB:mm/dd/yyyy" required><br><br>
+      <label>Address</label>
+      <input type="text" name="address" id="address-field" class="register-form-field" placeholder="Address" ><br><br>
+      <label>Clown type</label>
+      <input type="text" name="clowntype" id="clownType-field" class="register-form-field" placeholder="Clown Type" required><br><br>
+      <label>Email</label>
+      <input type="text" name="email" id="email-field" class="register-form-field" placeholder="email id" required><br><br>
+      <label>Upload photo</label>
+      <input type='file'id="image-field" class="register-form-field"accept="image/*" onchange="preview_image(event)"/><br><br>
+      <img id="myImg" src="#" alt="your image" height=200 width=100>
+      <input type="submit" value="Submit Registration" id="register-form-submit">
+    </form>
+    </div>
+
+    <div>
+      <h2 id="clown-list-header" style="display: none;">Registered clowns</h2>
+      <ol id ="clownlist">
+      </ol>
+    </div>
+  </main>
+
+</body>
+
+</html>
